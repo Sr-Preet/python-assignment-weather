@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather Forcast</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+      body {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialised;
+      }
+
+      html {
+        font-size: 1em;
+        line-height: 1.5;
+      }
+
+      html,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: "Lato", sans-serif;
+        color: #fcfcfc;
+      }
+
+      ::-moz-selection {
+        background: #000;
+        color: #ccc;
+        text-shadow: none;
+      }
+
+      ::selection {
+        background: #000;
+        color: #ccc;
+        text-shadow: none;
+      }
+
+      body {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background: #1d1f20;
+      }
+
+      body:after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+
+      main .input {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      main .input input {
+        color: #222;
+        border: none;
+        line-height: 2;
+        font-size: 2em;
+        padding: 10px;
+        border-radius: 0.25em;
+      }
+
+      main .input input:focus {
+        border: none;
+        outline: none;
+      }
+
+      main h1 {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      main .forecast {
+        text-align: center;
+      }
+
+      main .forecast .today {
+        width: 50%;
+        float: left;
+        margin-left: 25%;
+        margin-right: 25%;
+        background: #1d1f20;
+        margin-bottom: 100px;
+      }
+
+      main .forecast div:nth-child(2) {
+        display: none;
+      }
+
+      main .forecast div:nth-child(3) {
+        width: 33.33333%;
+        float: left;
+        background: #292c2d;
+      }
+
+      main .forecast div:nth-child(4) {
+        width: 33.33333%;
+        float: left;
+        background: #27292b;
+      }
+
+      main .forecast div:last-child {
+        width: 33.33333%;
+        float: right;
+        margin-right: 0;
+        background: #242728;
+      }
+
+      main .forecast h3 {
+        padding: 10px 0;
+      }
+
+      .switch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 0.9em;
+        padding: 5px;
+        background: #292c2d;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/weatherapp" method="POST">
+      <main>
+        <div class="input">
+          <input
+            type="text"
+            name="city"
+            placeholder="Check Weather In.."
+            autofocus
+          />
+        </div>
+        <div class="input">
+          <input type="submit" value="Search" />
+        </div>
+      </main>
+    </form>
+  </body>
+</html>
