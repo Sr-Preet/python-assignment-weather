@@ -71,7 +71,7 @@ def get_weatherdata():
         if weather_data:
             return render_template('response.html', **weather_data)
 
-    return render_template('response.html', city=None, temperature=None, description=None, humidity=None, wind_speed=None, current_date=None, current_day=None)
+    return render_template('error.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)

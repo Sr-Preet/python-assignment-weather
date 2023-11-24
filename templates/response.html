@@ -286,8 +286,16 @@
               <div class="clear"></div>
             </div>
             <div class="wind">
-              <span class="title">WIND</span
-              ><span class="value">{{ wind_speed }} km/h</span>
+              <span class="title">WIND</span>
+              <span class="value">
+                {% if units == 'metric' %}
+                {{ wind_speed }} KM/H
+              {% elif units == 'imperial' %}
+                {{ wind_speed }} M/H
+              {% else %}
+                {{ wind_speed }} KM/H
+              {% endif %}
+              </span>
               <div class="clear"></div>
             </div>
           </div>
