@@ -42,7 +42,8 @@ def get_weather_data(city, units='metric'):
             'humidity': humidity,
             'wind_speed': wind_speed,
             'current_date': current_date,
-            'current_day': current_day
+            'current_day': current_day,
+            'units': units
         }
 
     except requests.exceptions.HTTPError as err:

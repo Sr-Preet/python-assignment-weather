@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Weather Forcast</title>
+    <title>Weather Forecast</title>
     <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
     <style>
       @import url(https://fonts.googleapis.com/css?family=Lato:300);
@@ -55,9 +55,9 @@
         text-align: center;
       }
 
-      main .input input {
+      main .input input,
+      main .input label {
         color: #222;
-        border: none;
         line-height: 2;
         font-size: 2em;
         padding: 10px;
@@ -122,6 +122,10 @@
         padding: 5px;
         background: #292c2d;
       }
+
+      .radio-button label{
+        color: #fff !important;
+      }
     </style>
   </head>
   <body>
@@ -134,6 +138,16 @@
             placeholder="Check Weather In.."
             autofocus
           />
+        </div>
+        <div class="input radio-button">
+          <label>
+            <input type="radio" name="units" value="metric" checked />
+            Metric
+          </label>
+          <label>
+            <input type="radio" name="units" value="imperial" />
+            Imperial
+          </label>
         </div>
         <div class="input">
           <input type="submit" value="Search" />
